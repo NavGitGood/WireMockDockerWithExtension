@@ -7,7 +7,7 @@ sample repo to showcase running wiremock on docker with persistent stubs, runtim
 # set env variables
 - `export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` (only if path to docker was not set already, check by running docker command in terminal)
 - `export AUTH_EXTENSION_USER="user_to_use"` (should not be empty)
-- `export AUTH_EXTENSION_PATH="pass_to_use"` (should not be empty)
+- `export AUTH_EXTENSION_PASS="pass_to_use"` (should not be empty)
 
 # create image and run the container in detached mode (from folder where docker-compose.yml is present)
 - for default file `docker-compose up -d`
