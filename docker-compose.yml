@@ -1,0 +1,17 @@
+version: "0.1"
+services:
+  wiremock:
+    image: "wiremock/wiremock:latest"
+    container_name: wiremock_admin_auth
+    ports:
+      - "8087:8080"
+    environment:
+    # for auth extension jar
+      - AUTH_EXTENSION_USER=${AUTH_EXTENSION_USER}
+      - AUTH_EXTENSION_PASS=${AUTH_EXTENSION_PASS}
+    volumes:
+    # copy files from local directory over into the container 
+      - ./extensions:/var/wiremock/extensions
+      - ./__files:/home/wiremock/__files
+      - ./mappings:/home/wiremock/mappings
+    entrypoint: ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--verbose"]

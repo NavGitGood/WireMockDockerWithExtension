@@ -1,0 +1,10 @@
+{
+    "request": {
+      "method": "GET",
+      "urlPath": "/api/v1/hall-of-fame"
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "hall-of-fame.json"
+    }
+  }
