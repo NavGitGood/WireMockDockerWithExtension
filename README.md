@@ -2,7 +2,7 @@
 sample repo to showcase running wiremock on docker with persistent stubs, runtime update to stubs and secure admin endpoints
 
 # setup basic authentication
-- download the jar (already added here) and setup env variables (in next step) (more details to be added)
+- download the jar (already added here, you can also build your own from [source](https://github.com/NavGitGood/WireMockAuthExtension)) and setup env variables (in next step)
 
 # set env variables
 - `export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"` (only if path to docker was not set already, check by running docker command in terminal)
@@ -22,3 +22,6 @@ sample repo to showcase running wiremock on docker with persistent stubs, runtim
 2. add/update the stubs by adding/updating files in `__files` and/or `mappings` folder in local directory
 3. make a post call to `http://localhost:8087/__admin/mappings/reset`(with basic authentication) to refresh the mappings
 4. verify the result
+
+# troubleshooting
+- if container does not launch, check the logs and make sure that env variables were setup
